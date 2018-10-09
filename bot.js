@@ -109,15 +109,15 @@ message.guild.members.forEach(m => {
 
 
 client.on('message', function(msg) {
-    const prefix = '-'
+    const prefix = '$'
     if(msg.content.startsWith (prefix  + 'server')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
       .setTitle(`Showing Details Of  **${msg.guild.name}*`)
-      .addField('🌐** تجربة لا غير**',`[** __${msg.guild.region}__ **]`,true)
-      .addField('🏅** ماعندي رتب**',`[** __${msg.guild.roles.size}__ **]`,true)
-      .addField('🔴**مدري كم عدد الاعضاء**',`[** __${msg.guild.memberCount}__ **]`,true)
+      .addField('🌐** نوع السيرفر**',`[** __${msg.guild.region}__ **]`,true)
+      .addField('🏅** __الرتب__**',`[** __${msg.guild.roles.size}__ **]`,true)
+      .addField('🔴**__ عدد الاعضاء__**',`[** __${msg.guild.memberCount}__ **]`,true)
       .addField('🔵**__ عدد الاعضاء الاونلاين__**',`[** __${msg.guild.members.filter(m=>m.presence.status == 'online').size}__ **]`,true)
       .addField('📝**__ الرومات الكتابية__**',`[** __${msg.guild.channels.filter(m => m.type === 'text').size}__** ]`,true)
       .addField('🎤**__ رومات الصوت__**',`[** __${msg.guild.channels.filter(m => m.type === 'voice').size}__ **]`,true)
