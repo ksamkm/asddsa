@@ -1,4 +1,3 @@
-
 const Discord = require("discord.js");
 
 const client = new Discord.Client();
@@ -60,5 +59,3 @@ client.user.setGame(Nothing,"http://twitch.tv/Mohamed192837465%22)
   console.log('')
 
 });
-
-client.login(process.env.BOT_TOKEN);
