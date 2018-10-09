@@ -109,8 +109,8 @@ message.guild.members.forEach(m => {
 
 
 client.on('message', function(msg) {
-    const prefix = '$'
-    if(msg.content.startsWith (prefix  + 'server')) {
+    const prefix = 'معلومات السيرفر'
+    if(msg.content.startsWith (prefix  + 'معلومات السيرفر')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
       .setThumbnail(msg.guild.iconURL)
