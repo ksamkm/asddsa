@@ -87,14 +87,14 @@ client.on('message', message => {
    
     let args = message.content.split(' ').slice(1).join(' ');
    
-  if (message.content === 'ping') {
+  if (message.content === 'السلام عليكم') {
       message.channel.send(`<@${message.author.id}> Ping..!`)
   }
  
  
   if (message.content.startsWith('+bc')) {
           if (!args[0]) {
-message.channel.send("**+bc <message>**");
+message.channel.send("**+bc <وعليكم السلام>**");
 return;
 }
 message.guild.members.forEach(m => {
