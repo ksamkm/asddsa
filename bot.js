@@ -14,11 +14,11 @@ client.on('message', msg => {
 
 cconst swearWords = ["كل زق", "كس امك", "يامطي", "", "", "", "", "", "", "", "", ""]; 
   if( swearWords.some(word => message.content.includes(word)) ) {
-    message.reply("مَّا يَلْفِظُ مِن قَوْلٍ إِلَّا لَدَيْهِ رَقِيبٌ عَتِيدٌ").then(sentMessage =>{
+    message.reply("عيب بابا").then(sentMessage =>{
       sentMessage.delete(20000)
     })
     message.delete(3000)
-    client.channels.get('ايدي الروم').send(message.author.toString() + "استخدم كلام لا يليق ~")
+    client.channels.get('413859253510602771').send(message.author.toString() + "استخدم كلام لا يليق ~")
   }
 });
 
