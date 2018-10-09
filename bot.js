@@ -110,20 +110,6 @@ client.on('message', message => {
 
 
 
-
-
-
-const swearWords = ["كل زق", "كلب", "كلمة", "كلمة", "كلمة", "كلمة", "كلمة", "كلمة", "كلمة", "كلمة", "كلمة", "كلمة"]; 
-  if( swearWords.some(word => message.content.includes(word)) ) {
-    message.reply("عيب بابا).then(sentMessage =>{
-      sentMessage.delete(20000)
-    })
-    message.delete(3000)
-    client.channels.get('413859253510602771').send(message.author.toString() + "استخدم كلام لا يليق ~")
-  }
-});
-
-
 client.on('message', message=> {
     if (message.author.bot) return;
     if (message.isMentioned(client.user))
