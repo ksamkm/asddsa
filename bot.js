@@ -1,5 +1,4 @@
-غير اسمه bot.js وامسح الاكواد الي فيه
-وحط ذا
+
 const Discord = require("discord.js");
 
 const client = new Discord.Client();
