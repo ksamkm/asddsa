@@ -107,7 +107,12 @@ message.guild.members.forEach(m => {
 });
 
 
-
+client.on('message', message =>{
+  if(message.content.startsWith('خروج')){
+    const voiceChannel = message.member.voiceChannel
+    voiceChannel.disconnect();
+    message.channel.send("تم الخروج من الروم الصوتي")
+}})
 
 
 
