@@ -2,7 +2,7 @@ const Discord = require("discord.js");
 
 const client = new Discord.Client();
 
-const prefix = "!"
+const prefix = "-"
 
 const UserBlocked = new Set();
 
@@ -111,7 +111,7 @@ message.guild.members.forEach(m => {
 
 
 client.on("message", message => {
-  if(message.content.startsWith("!اطفي")) {
+  if(message.content.startsWith("-kill")) {
   if(message.author.id === "303867598544830475) { //اي ديك
     message.channel.send('سيتم اطفاء البوت')
     process.kill(process.pid)
