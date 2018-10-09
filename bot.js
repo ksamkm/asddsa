@@ -12,8 +12,8 @@ const UserBlocked = new Set();
 
 client.on('ready', () => {
 
-  cconsole.log(`Logged in as ${client.user.tag}!`);
-
+  console.log(`Logged in as ${client.user.tag}!`);
+ 
 client.user.setGame(`Nothing`,"http://twitch.tv/Mohamed192837465")
 
   console.log('')
