@@ -14,7 +14,7 @@ client.on('ready', () => {
 
   console.log(Logged in as ${client.user.tag}!);
 
-client.user.setGame(Nothing,"http://twitch.tv/Mohamed192837465%22)
+client.user.setGame(`Nothing`,"http://twitch.tv/Mohamed192837465")
 
   console.log('')
 
@@ -59,3 +59,8 @@ client.user.setGame(Nothing,"http://twitch.tv/Mohamed192837465%22)
   console.log('')
 
 });
+
+
+
+
+client.login(process.env.BOT_TOKEN);
