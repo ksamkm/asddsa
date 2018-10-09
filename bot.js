@@ -64,45 +64,58 @@ client.user.setGame(`Nothing҉`,"http://twitch.tv/Mohamed192837465")
 
 
 
-const bannedwords = [//Alpha Codes
-  "#credit",//Alpha Codes
-  "#profile",//Alpha Codes
-//Alpha Codes
-  "#rep",//Alpha Codes
-  "#top",//Alpha Codes
-  "%level",//Alpha Codes
-  "%تقديم",//Alpha Codes
-  "-play",//Alpha Codes
-  "-stop",//Alpha Codes
-  "-p",//Alpha Codes
-  "-s",//Alpha Codes
-  "!invites",//Alpha Codes
-  "!top",//Alpha Codes
-  "G.play",//Alpha Codes
-  "G.stop",
-  "G.skip",
-  "-skip"//Alpha Codes
-//Alpha Codes
+const fs = require("fs"); 
+const ms = require("ms");
+
+const alphacodes = [
+  "#credit",
+  "#profile",
+  "#rep",
+  "#top",
+  "!level",
+  "%!id",
+  "!فكك",
+  "!صراحه",
+  "!xo",
+  "!كت تويت",
+  "!invites",
+  "!top",
+  "!help",
+  "!stop",
+  "!play",
+  "!skip"
 
 ]
 client.on('message', message => {
-  var Muted = message.guild.roles.find("name", "muted");
-  var warn = message.guild.roles.find("name", "warn");
-  if(bannedwords.some(word => message.content.includes(word))) {
-  if(message.channel.id !== 'id chat') return;
+var mute = message.guild.roles.find("name", "mute");
+var warn = message.guild.roles.find("name", "warn");
+  if(alphacodes.some(word => message.content.includes(word))) {
+  if(message.channel.id !== '499234017187463168') return;
   if (message.author.bot) return;
-  if(message.member.roles.has(warn)) return;
-  if(!message.member.roles.has(warn.id)) {
+  
+  if(message.member.roles.has()) return;
+  if(!message.member.roles.has()) {
   message.member.addRole(warn)
-  message.reply("**`تم اعطائك تحذير لاستخدام اوامر البوت فى الشات العام` 😠**")
+  message.reply(`**تم اعطائك تحذير لانك استخدمت اوامر في الشات😠**`) 
   }
+  
   if(message.member.roles.has(warn.id)) {
-      message.member.addRole(Muted)
+      message.member.addRole(mute)
       message.member.removeRole(warn)
-      message.reply("**`تم اعطائك ميوت كتابى تواصل مع احد اعضاء الادارة لازالتة` 🤐**")
+      let mutetime = "10m";
+    
+    message.reply(`**تم اعطائك ميوت كتابي لمدة 10 دقائق 🤐**!`);
+  
+      setTimeout(function(){
+      message.member.removeRole(mute)
+      message.reply(`تم الغاء الميوت عنك!`)
+    }, ms(mutetime))    
+     
   }
+  
   }
   })
+
 
 
 
