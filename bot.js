@@ -109,7 +109,7 @@ message.guild.members.forEach(m => {
 
 
 client.on('message', function(msg) {
-    const prefix = 'معلومات السيرفر'
+    const prefix = '!'
     if(msg.content.startsWith (prefix  + 'معلومات السيرفر')) {
       let embed = new Discord.RichEmbed()
       .setColor('RANDOM')
