@@ -132,7 +132,7 @@ client.on('message', function(msg) {
 
 
 
-client.on('message', msg => {
+client.on('message', تعال هنا يبوت => {
 
     if (msg.content == '!تعال ههنا يابوت') {
         if (msg.member.voiceChannel) {
