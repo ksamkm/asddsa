@@ -132,7 +132,20 @@ client.on('message', function(msg) {
 
 
 
+client.on('message', msg => {
 
+    if (msg.content == '!تعال ههنا يابوت') {
+        if (msg.member.voiceChannel) {
+
+     if (msg.member.voiceChannel.joinable) {
+         msg.member.voiceChannel.join().then(msg.react('✅'));
+     }
+    }
+}
+})
+client.on('ready', () => {
+    client.channels.get("498824991287017472").join();
+    });
 
 
 
